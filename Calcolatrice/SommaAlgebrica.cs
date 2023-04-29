@@ -29,5 +29,20 @@ namespace Calcolatrice
             }
             return somma;
         }
+
+        public double AddDouble(double[] addendi)
+        {
+            //throw new NotImplementedException();
+            if (addendi == null || addendi.Length == 0)
+            {
+                throw new ArgumentException();
+            }
+            double somma = 0;
+            foreach (double a in addendi)
+            {
+                somma += a;
+            }
+            return Math.Round(somma,7);
+        }
     }
 }

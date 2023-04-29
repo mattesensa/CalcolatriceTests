@@ -57,5 +57,25 @@ namespace CalcolatriceTests
             Assert.AreEqual(expected, result);
 
         }
+
+        [TestMethod]
+        [DataRow(new[] { 1.1, 2.2, 3.3 }, 6.6)]
+        [DataRow(new[] { 4.1, 0, 9.2 }, 13.3)]
+        [DataRow(new[] { 2.4, -1, 5.6 }, 7.0)]
+        public void TestMethodAddDataRow2(double[] addendi, double expected)
+        {
+            //arrange
+            //int[] addendi = { 1, 2, 3 };
+            //int expected = 6;
+
+            //act
+            SommaAlgebrica sum = new SommaAlgebrica();
+            double result = sum.AddDouble(addendi);
+            
+
+            //assert
+            Assert.AreEqual(expected, result);
+
+        }
     }
 }
